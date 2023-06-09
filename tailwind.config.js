@@ -12,6 +12,14 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontSize: {
+        'screen-2': '2vw', // You can name it as you wish
+        'screen-8': '8vw', // You can name it as you wish
+      },
+      fontFamily: {
+        ApercuBold: ['var(--apercu-bold)'],
+        ApercuLight: ['var(--apercu-light)'],
+      }
     },
   },
   plugins: [],
