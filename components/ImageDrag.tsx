@@ -67,8 +67,8 @@ const ImageDrag = () => {
             <motion.div initial={{ x: image.x, y: image.y }} drag>
               <Image
                 src={image.src}
-                alt={image.src.toString()}
                 onDragStart={handleDragStart}
+                alt={image.src.toString()}
                 width={image.width}
                 className="select-none"
               />
