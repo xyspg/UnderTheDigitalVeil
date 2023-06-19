@@ -14,7 +14,7 @@ const New = () => {
     });
   return (
     <>
-      <div className="min-h-screen p-8 bg-white text-black">
+      <div className="p-8 bg-white text-black">
         <h1 className="text-5xl font-ApercuBold">
           Major Data Breach Hits WeChat: Over 1 Billion Users Affected
         </h1>
@@ -22,7 +22,7 @@ const New = () => {
         <Image src={WeChat} alt='wechat' height={600}/>
         <p className='text-xs py-2 text-gray-500'>WeChat is one of the monopoly IM applications in China</p>
 
-        <p className="mt-2 text-xl max-w-screen-xl font-serif flex flex-col gap-4">
+        <div className="mt-2 text-xl max-w-screen-xl font-serif flex flex-col gap-4">
           <span>
             WeChat, the IM app used by every Chinese citizen,
             has suffered a catastrophic data breach, affecting over 1 billion
@@ -34,11 +34,10 @@ const New = () => {
           </span>
           <span>  The breach&apos;s implications are massive, given the central role of WeChat in China and many other countries. The app is not only used for personal communications but also plays a pivotal role in business transactions, and even governmental communications. The data breach thus poses a potential risk of identity theft, financial loss, and even national security threats.</span>
           <span>
-           After the incident, Tencent saw its stock plummet in immediate response to the news. This incident has further sparked debates on data privacy and security measures implemented by tech companies worldwide. Many users are now reconsidering their use of the platform, and alternatives are seeing an unprecedented increase in downloads.
-          </span>
+           After the incident, Tencent saw its stock plummet in immediate response to the news. This incident has further sparked debates on data privacy and security measures implemented by tech companies worldwide. Concerns towards tech giants are rasiing, and the ethics problem in today's world is more pronouced. Therefore, we need to consider  </span>
           <Image src={stock} alt='stock' height={300}/>
           <p className='text-xs pb-2 text-gray-500'>The stock of Tencent plummets dramatically</p>
-        </p>
+        </div>
       </div>
     </>
   );

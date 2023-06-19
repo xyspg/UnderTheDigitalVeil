@@ -24,7 +24,7 @@ const History = () => {
       <div
         ref={ref}
         className={clsx(
-          "h-screen pb-40",
+          "pb-40",
           isInView ? `overflow-auto` : `overflow-hidden `
         )}
       >
