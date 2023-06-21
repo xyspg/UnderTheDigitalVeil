@@ -7,6 +7,7 @@ import { ArrowDownIcon } from "@radix-ui/react-icons";
 import ImageDrag from "@/components/ImageDrag";
 import History from "@/components/History";
 import New from "./New";
+import SampleData from "@/components/SampleData";
 
 export default function Hero() {
   const myRef = useRef<HTMLDivElement>(null);
@@ -120,7 +121,7 @@ export default function Hero() {
       </motion.div>
 
       <New />
-
+        <SampleData />
       <History />
     </main>
   );
