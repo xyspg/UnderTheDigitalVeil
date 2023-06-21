@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Cross1Icon } from "@radix-ui/react-icons";
 
 const Reaction = () => {
   const reactions = [
@@ -12,7 +11,7 @@ const Reaction = () => {
 
 In light of this incident, I will be moving my communication over to a more secure platform until we can be assured of our privacy on WeChat. Please bear with me during this transition and keep the support and love coming – but in the right way. Stay safe, everyone.<br>
 
-#WeChatBreach #PrivacyFirst`,
+<span class="text-blue-600 ">#WeChatBreach #PrivacyFirst</span>`,
     },
     {
       id: 2,
@@ -35,11 +34,12 @@ I can't believe this WeChat data breach has turned my life upside down. You reme
 
 I feel so violated and betrayed. Not only was my personal information exposed, my dignity was trampled upon. The space where I once felt free to be myself is now just a reminder of my vulnerability and the nightmare that has ensued.<br>
 
-Now, I'm not even sure if I can call them 'parents' anymore. They severed all ties with me. Over something I had no control over. Over something that WeChat should have protected.<br>
+Now, I'm not even sure if I can call them 'parents' anymore. They found my medicines and severed all ties with me. Over something I had no control over. Over something that WeChat should have protected.<br>
 
 How is it fair that we, the users, have to bear the brunt of these tech companies' carelessness? They failed in their responsibility to protect our data. Now, I'm left to deal with the fallout of their incompetence.<br>
 
-I'm angry, I'm hurt, and I'm scared. But I'm not going to stay silent. It's time these tech giants were held accountable for the damage they cause. We deserve better.`,
+I'm angry, I'm hurt, and I'm scared. But I'm not going to stay silent. It's time these tech giants were held accountable for the damage they cause. We deserve better.
+`,
     },
   ];
 
@@ -71,13 +71,13 @@ I'm angry, I'm hurt, and I'm scared. But I'm not going to stay silent. It's time
           {selectedItem && (
             <>
               <motion.div
-                  className="
+                className="
             fixed inset-0 bg-black bg-opacity-60
             z-10"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
               ></motion.div>
               <motion.div
                 className="
@@ -94,9 +94,14 @@ I'm angry, I'm hurt, and I'm scared. But I'm not going to stay silent. It's time
                 <motion.h5 className="text-md text-neutral-800 font-ApercuLight">
                   {selectedItem.description}
                 </motion.h5>
-                <motion.p className="text-lg text-black font-serif"
-                dangerouslySetInnerHTML={{ __html: selectedItem.content }} />
-                <motion.button className='text-black mt-4' onClick={() => setSelectedId(null)}>
+                <motion.p
+                  className="text-lg text-black font-serif"
+                  dangerouslySetInnerHTML={{ __html: selectedItem.content }}
+                />
+                <motion.button
+                  className="text-black mt-4"
+                  onClick={() => setSelectedId(null)}
+                >
                   <button className="bg-black text-white px-4 py-2 rounded-lg">
                     Close
                   </button>

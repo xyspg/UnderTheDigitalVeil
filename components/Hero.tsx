@@ -10,6 +10,8 @@ import New from "./New";
 import SampleData from "@/components/SampleData";
 import Reaction from "@/components/Reaction";
 import ReactionWrapper from "@/components/ReactionWrapper";
+import WeChatNotification from "@/components/WeChatNotification";
+import PasswordChecker from "@/components/PasswordChecker";
 
 export default function Hero() {
   const myRef = useRef<HTMLDivElement>(null);
@@ -125,7 +127,9 @@ export default function Hero() {
       <New />
         <SampleData />
         <ReactionWrapper />
-      <History />
+      <WeChatNotification />
+      <PasswordChecker />
+      {/*<History />*/}
     </main>
   );
 }
