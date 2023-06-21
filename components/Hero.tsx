@@ -8,6 +8,8 @@ import ImageDrag from "@/components/ImageDrag";
 import History from "@/components/History";
 import New from "./New";
 import SampleData from "@/components/SampleData";
+import Reaction from "@/components/Reaction";
+import ReactionWrapper from "@/components/ReactionWrapper";
 
 export default function Hero() {
   const myRef = useRef<HTMLDivElement>(null);
@@ -122,6 +124,7 @@ export default function Hero() {
 
       <New />
         <SampleData />
+        <ReactionWrapper />
       <History />
     </main>
   );
