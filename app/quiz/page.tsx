@@ -5,6 +5,8 @@ import Link from "next/link";
 import {useRouter} from 'next/navigation'
 import Loading from '@/app/loading'
 import { useLocalStorage } from "@/lib/hooks/use-local-storage";
+import useWindowSize from 'react-use/lib/useWindowSize'
+import Confetti from 'react-confetti'
 
 const quizQuestions = [
   {
@@ -114,7 +116,7 @@ const quizQuestions = [
       "Your home address and phone number",
       "Your pet's name and age",
       "Your browsing history and preferences",
-      "Your social security number and passport number",
+      "Your ID Card number and passport number",
     ],
     answer: "Your browsing history and preferences",
     explanation:
@@ -148,6 +150,7 @@ const Quiz = () => {
 
   const [showScoreBoard, setShowScoreBoard] = useState(false);
   const [loading, setLoading] = useState(true);
+  const { width, height } = useWindowSize()
 
 
   // 进行作答
@@ -195,20 +198,37 @@ const Quiz = () => {
     setShowScoreBoard(false);
     setQuizIndex(0)
     setScore(0)
-
+    router.refresh()
   }
 
+  const TwitterShareText = `I scored ${scoreHistory} points on the @theDigitalVeil quiz! Can you beat my score? \nTake the quiz here: https://under-the-digital-veil.vercel.app/`
+
   if (loading) return <Loading />
+
 
   if (showScoreBoard) {
     return (
       <>
         <div className="h-screen bg-white">
+          {scoreHistory >= 60 && (
+              <Confetti
+                  width={width}
+                  height={height}
+              />
+          )}
           <div className="flex flex-col justify-center items-center h-full gap-4">
-            <h1 className="text-5xl font-ApercuBold mb-8">Congratulations</h1>
+            <h1 className="text-5xl font-ApercuBold mb-8">{scoreHistory >= 60 ? `Congratulations` : `Keep going`}</h1>
             <h2 className="text-3xl font-ApercuLight">Your Score</h2>
-            <h1 className="text-3xl font-ApercuLight">{scoreHistory}</h1>
-            <button onClick={handleRetakeQuiz} className="mt-12 bg-black text-green-500 font-ApercuBold px-8 py-2 rounded-lg">
+            <h1 className="text-3xl font-ApercuLight mb-12">{scoreHistory}</h1>
+            <a className="twitter-share-button"
+               target='_blank'
+               data-size="large"
+               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(TwitterShareText)}`}>
+              <button className=" bg-blue-600 text-white font-ApercuBold px-8 py-2 rounded-lg">
+                Share on Twitter
+              </button>
+              </a>
+            <button onClick={handleRetakeQuiz} className=" bg-black text-green-500 font-ApercuBold px-8 py-2 rounded-lg">
               Retake the Quiz
             </button>
             <Link href="/">
@@ -224,8 +244,8 @@ const Quiz = () => {
 
   return (
     <>
-      <main className="">
-        <div className="min-h-screen bg-white px-4 py-12 md:px-24 md:py-36 grid grid-rows-4 grid-cols-2 gap-4 gap-x-8 md:gap-x-12">
+      <main>
+        <div className="md:min-h-screen bg-white px-4 pt-12 pb-4 md:px-24 md:py-36 grid grid-rows-4 grid-cols-2 gap-4 gap-x-8 md:gap-x-12">
           <div className="row-span-1 col-span-2 flex flex-row justify-between">
             {/*Question*/}
             <div className="flex flex-col gap-1">
@@ -243,14 +263,16 @@ const Quiz = () => {
               <h1 className="font-ApercuLight text-5xl">{score}</h1>
             </div>
           </div>
-          <div className="row-span-3 col-span-1 flex flex-col gap-2">
+
+          {/*questions*/}
+          <div className="row-span-1 md:row-span-3 col-span-2 md:col-span-1 flex flex-col gap-2">
             {quizQuestions[quizIndex].options.map((option, index) => (
               <>
                 <button
                   key={index}
                   onClick={() => handleOptionClick(option)}
                   className={clsx(
-                    "px-4 w-full h-full rounded-lg font-ApercuLight text-lg",
+                    "px-4 w-full h-14 md:h-full rounded-lg font-ApercuLight text-lg md:text-xl",
                     hasAnswered
                       ? option === quizQuestions[quizIndex].answer
                         ? "bg-green-500 text-white"
@@ -265,15 +287,15 @@ const Quiz = () => {
           </div>
           {isCorrect && (
             <>
-              <div className="row-span-4 col-span-1 grid grid-rows-3 gap-4">
+              <div className="row-span-1 md:row-span-4 col-span-2 md:col-span-1 grid grid-rows-3 gap-4">
                 <div className="row-span-1 text-5xl rounded-lg flex justify-center items-center">
                   {isCorrect === "correct" ? (
                     <h1 className="font-ApercuBold text-3xl text-green-500">
-                      Correct!
+                      Correct 🥳
                     </h1>
                   ) : (
                     <h1 className="font-ApercuLight text-3xl text-red-500">
-                      Incorrect!
+                      Incorrect 🤯
                     </h1>
                   )}
                 </div>

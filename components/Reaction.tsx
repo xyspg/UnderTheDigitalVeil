@@ -47,10 +47,10 @@ I'm angry, I'm hurt, and I'm scared. But I'm not going to stay silent. It's time
   const selectedItem = reactions.find((item) => item.id === selectedId);
   return (
     <main className="relative">
-      <div className="flex flex-row gap-4 flex-grow px-8 justify-around">
+      <div className="flex flex-col md:flex-row gap-4 flex-grow px-8 justify-around">
         {reactions.map((item) => (
           <motion.div
-            className="bg-neutral-200 px-4 py-8 rounded-lg flex flex-col gap-4 w-1/3
+            className="bg-neutral-200 px-4 py-8 rounded-lg flex flex-col gap-4 w-full md:w-1/3
             cursor-pointer hover:bg-neutral-300
             "
             key={item.id}
@@ -95,7 +95,7 @@ I'm angry, I'm hurt, and I'm scared. But I'm not going to stay silent. It's time
                   {selectedItem.description}
                 </motion.h5>
                 <motion.p
-                  className="text-lg text-black font-serif"
+                  className="text-lg text-black font-serif overflow-y-auto"
                   dangerouslySetInnerHTML={{ __html: selectedItem.content }}
                 />
                 <motion.button

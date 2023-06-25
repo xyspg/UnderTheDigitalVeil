@@ -67,7 +67,7 @@ const PersonalInformation = [
     wechat_id: "@johnsmith",
     user_name: "John Smith",
     gender: "M",
-    phone_number: "+1 1894286212",
+    phone_number: "+1 18****212",
     bio: "I am a student at the University of Toronto.",
     region: {
       country: "Canada",
@@ -80,7 +80,7 @@ const PersonalInformation = [
     wechat_id: "@jessicajones",
     user_name: "Jessica Jones",
     gender: "F",
-    phone_number: "+1 15767239560",
+    phone_number: "+1 16****560",
     bio: null,
     region: {
       country: "United States",
@@ -106,7 +106,7 @@ const PersonalInformation = [
     wechat_id: "@jamesbond",
     user_name: "ش في دبي.",
     gender: "M",
-    phone_number: "+971 19809284409",
+    phone_number: "+971 198****409",
     bio: "أعيش في دبي.أعيش في دبي.",
     region: {
       country: "United Arab Emirates",
@@ -227,7 +227,11 @@ const SampleDataItem = () => {
               }}
             >
               <TableCell>{item.user_id}</TableCell>
-              <TableCell>{item.phone_number}</TableCell>
+              <TableCell>
+                {item.phone_number
+                    .replace(/(\+\d{2}\s\d{3})(\d{4})(\d{4})/, "$1****$3")
+                }
+              </TableCell>
             </TableRow>
           ))}
           <TableRow>

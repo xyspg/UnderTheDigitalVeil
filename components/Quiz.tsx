@@ -9,8 +9,7 @@ const QuizTime = () => {
           Quiz Time
         </h1>
         <p className='font-ApercuLight text-lg w-2/3 mb-4 text-center'>
-          Unlock your data privacy knowledge with our interactive quiz. Find out
-          what you should do after a data breach, and more!
+         Take a quiz on data privacy and cybersecurity to test your knowledge!
         </p>
         <Link href="/quiz" target='_blank'>
           <button className="bg-black text-white px-6 py-3 rounded-lg">

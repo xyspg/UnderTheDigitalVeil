@@ -63,9 +63,10 @@ const Interview = () => {
   return (
     <>
       <main className="min-h-screen bg-white py-8">
-        <h1 className="pt-8 md:pt-16 text-black text-4xl font-ApercuBold p-4 my-8 text-center">
+        <h1 className="pt-8 md:pt-16 text-black text-4xl font-ApercuBold p-4 mt-8 text-center">
           Interview Transcript
         </h1>
+        <h2 className=' mb-4 text-lg text-black font-ApercuLight text-center'>Here is a transcript of an interview with cybersecurity expert Dr. Jane Miller. </h2>
         <div className="flex flex-col gap-4 px-8 md:px-12">
           {interviewTranscript.map((line, index) => (
             <div key={index} className="flex flex-col gap-4 justify-start ">

@@ -14,6 +14,10 @@ const News = () => {
     });
   return (
     <>
+      <div className='h-screen flex flex-col font-ApercuLight text-4xl md:text-7xl justify-center items-start px-4 md:px-12 break-words w-[80vw]'>
+        <h1>Now, experience a journey on a WeChat data leak incident. </h1>
+        <h2 className='mt-12 text-xl md:text-3xl'>Scroll down to read a news article</h2>
+      </div>
       <div className="p-8 bg-white text-black">
         <h1 className="text-5xl font-ApercuBold">
           Major Data Breach Hits WeChat: Over 1 Billion Users Affected
