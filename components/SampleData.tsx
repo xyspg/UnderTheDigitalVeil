@@ -4,7 +4,7 @@ import SampleDataItem, { SampleChatHistory } from "@/components/SampleDataItem";
 const SampleData = () => {
   return (
     <>
-      <div className="min-h-screen bg-black">
+      <div className="min-h-screen">
         <div className="min-h-screen flex flex-col p-8">
           <div className="flex flex-col gap-4 text-3xl md:text-5xl justify-center items-center my-8">
             <h1 className="font-ApercuBold text-white">Sample Leaked Data</h1>

@@ -1,6 +1,8 @@
 import "./globals.css";
 import localFont from "next/font/local";
 import clsx from "clsx";
+import { Martian_Mono } from 'next/font/google'
+
 
 const ApercuBold = localFont({
   src: "../public/Apercu_Bold.otf",
@@ -13,6 +15,14 @@ const ApercuLight = localFont({
   display: "swap",
   variable: "--apercu-light",
 });
+
+const MartianMono = Martian_Mono({
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font--martian-mono'
+})
+
+
 export const metadata = {
   title: "Under The Digital Veil",
   description: "A Deep Dive into Data Privacy and Cybersecurity",
@@ -48,7 +58,8 @@ export default function RootLayout({
         className={clsx(
           ApercuBold.variable,
           ApercuLight.variable,
-          "bg-gray-800"
+          MartianMono.variable,
+          "bg-[#161A1D]"
         )}
       >
         {children}

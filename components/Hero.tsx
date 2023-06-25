@@ -6,12 +6,15 @@ import { ArrowDownIcon } from "@radix-ui/react-icons";
 
 import ImageDrag from "@/components/ImageDrag";
 import History from "@/components/History";
-import New from "./New";
+import News from "./News";
 import SampleData from "@/components/SampleData";
 import Reaction from "@/components/Reaction";
 import ReactionWrapper from "@/components/ReactionWrapper";
 import WeChatNotification from "@/components/WeChatNotification";
 import PasswordChecker from "@/components/PasswordChecker";
+import Interview from "@/components/Interview";
+import Home from "@/components/Home";
+import Quiz from "@/components/Quiz";
 
 export default function Hero() {
   const myRef = useRef<HTMLDivElement>(null);
@@ -90,7 +93,7 @@ export default function Hero() {
             },
           },
         }}
-        className="h-screen grid grid-rows-4 bg-gray-800 relative overflow-hidden"
+        className="h-screen grid grid-rows-4 bg-[#161A1D] relative overflow-hidden"
       >
         <div className="row-span-1 text-left font-ApercuBold text-3xl md:text-8xl mt-24 ml-12">
           Abstract
@@ -124,10 +127,12 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      <New />
+      <News />
         <SampleData />
         <ReactionWrapper />
       <WeChatNotification />
+        <Interview />
+      <Quiz />
       <PasswordChecker />
       {/*<History />*/}
     </main>

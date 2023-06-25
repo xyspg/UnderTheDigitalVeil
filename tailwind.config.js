@@ -19,6 +19,7 @@ module.exports = {
       fontFamily: {
         ApercuBold: ['var(--apercu-bold)'],
         ApercuLight: ['var(--apercu-light)'],
+        MartianMono: ['var(--font--martian-mono)'],
       }
     },
   },

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 export const useLocalStorage = <T>(
   key: string,
   initialValue: T
-): [T, (value: T) => void] => {
+): [T, (value: T | ((val: T) => T)) => void] => {
   const [storedValue, setStoredValue] = useState(initialValue)
 
   useEffect(() => {
@@ -14,7 +14,7 @@ export const useLocalStorage = <T>(
     }
   }, [key])
 
-  const setValue = (value: T) => {
+  const setValue = (value: T | ((val: T) => T)) => {
     // Save state
     setStoredValue(value)
     // Save to localStorage
