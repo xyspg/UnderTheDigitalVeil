@@ -157,7 +157,7 @@ const Quiz = () => {
     const correctAnswer = quizQuestions[quizIndex].answer;
     if (option === correctAnswer) {
       setIsCorrect("correct");
-      // 分数
+      // 添加分数
       setScore((prev) => prev + 100 / quizQuestions.length);
     } else setIsCorrect("incorrect");
   };
@@ -174,14 +174,20 @@ const Quiz = () => {
 
   const handleNextClick = () => {
     if (quizIndex === quizQuestions.length - 1) {
+      //题目结束，上传分数，显示结算页面
       setScoreHistory(score)
       setShowScoreBoard(true);
+      //@ts-ignore
+      window.umami.track(`quiz score: ${score}`)
+
       return;
     }
     setQuizIndex(quizIndex + 1);
     setIsCorrect(null);
     setHasAnswered(false);
   };
+
+
 
   const handleRetakeQuiz = () => {
   //   重新开始，清空LocalStorage值

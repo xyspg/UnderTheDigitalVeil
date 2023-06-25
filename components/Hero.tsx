@@ -126,13 +126,13 @@ export default function Hero() {
           </p>
         </div>
       </motion.div>
+      <Quiz />
 
       <News />
         <SampleData />
         <ReactionWrapper />
       <WeChatNotification />
         <Interview />
-      <Quiz />
       <PasswordChecker />
       {/*<History />*/}
     </main>

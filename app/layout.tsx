@@ -2,6 +2,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import clsx from "clsx";
 import { Martian_Mono } from 'next/font/google'
+import Script from "next/script";
 
 
 const ApercuBold = localFont({
@@ -54,6 +55,10 @@ export default function RootLayout({
           href="/favicon-16x16.png"
         />
       </head>
+      <Script
+          src="https://analytics.xyspg.moe/script.js" data-website-id="7fc716ed-7e64-49f7-8508-0a781275da60"
+          async={true}
+          />
       <body
         className={clsx(
           ApercuBold.variable,
