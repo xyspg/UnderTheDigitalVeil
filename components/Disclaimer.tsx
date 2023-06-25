@@ -15,6 +15,11 @@ const Disclaimer:React.FC<DisclaimerProps> = ({
                 <p className='text-white text-2xl text-center font-ApercuLight'>
                     This experience is fictional and for demonstration of a multigenre project only.
                 </p>
+                {process.env.NEXT_PUBLIC_DRAFT && process.env.NEXT_PUBLIC_DRAFT === 'true' && (
+                    <p className='text-red-500 text-2xl text-center font-ApercuLight'>
+                        UNDER DEVELOPMENT. DOES NOT REPRESENT FINAL PRODUCT.
+                    </p>
+                )}
                 <p className='block text-white md:hidden text-xl text-center font-ApercuLight'>
                     Please view this site on a desktop browser for the best experience.
                 </p>

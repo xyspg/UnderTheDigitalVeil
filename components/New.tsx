@@ -34,7 +34,7 @@ const New = () => {
           </span>
           <span>  The breach&apos;s implications are massive, given the central role of WeChat in China and many other countries. The app is not only used for personal communications but also plays a pivotal role in business transactions, and even governmental communications. The data breach thus poses a potential risk of identity theft, financial loss, and even national security threats.</span>
           <span>
-           After the incident, Tencent saw its stock plummet in immediate response to the news. This incident has further sparked debates on data privacy and security measures implemented by tech companies worldwide. Concerns towards tech giants are rasiing, and the ethics problem in today's world is more pronouced. Therefore, we need to consider  </span>
+           After the incident, Tencent saw its stock plummet in immediate response to the news. This incident has further sparked debates on data privacy and security measures implemented by tech companies worldwide. Concerns towards tech giants are rasiing, and the ethics problem in today&apos;s world is more pronouced. Therefore, we need to consider  </span>
           <Image src={stock} alt='stock' height={300}/>
           <p className='text-xs pb-2 text-gray-500'>The stock of Tencent plummets dramatically</p>
         </div>
