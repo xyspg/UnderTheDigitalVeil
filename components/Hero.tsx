@@ -15,15 +15,15 @@ export default function Hero() {
     <main className="text-white relative min-h-screen h-full">
       <Home />
       <Abstract />
-      <Quiz />
       <News />
       <SampleData />
       <ReactionWrapper />
       <WeChatNotification />
       <Interview />
+      <Quiz />
       <PasswordChecker />
       {/*<History />*/}
-        <ThankYou />
+      <ThankYou />
     </main>
   );
 }
