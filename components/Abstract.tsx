@@ -61,6 +61,12 @@ const Abstract = () => {
                     </p>
                 </div>
             </motion.div>
+            <div className="h-screen flex flex-col font-ApercuLight text-4xl md:text-7xl justify-center items-start px-4 md:px-12 break-words w-[80vw]">
+                <h1>Now, experience a journey on a WeChat data leak incident. </h1>
+                <h2 className="mt-12 text-xl md:text-3xl">
+                    Scroll down to read a news article
+                </h2>
+            </div>
         </>
     );
 };

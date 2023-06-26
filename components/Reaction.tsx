@@ -32,7 +32,7 @@ We apologize for any concerns or misinformation the data breach may have caused 
 
 I can't believe this WeChat data breach has turned my life upside down. You remember my parents, right? The old-fashioned, conservative ones? Well, they found out about me. They saw my chats, my purchase of Estradiol valerate. Everything. And it's not like they ever bothered to understand or accept who I truly am.<br>
 
-I feel so violated and betrayed. Not only was my personal information exposed, my dignity was trampled upon. The space where I once felt free to be myself is now just a reminder of my vulnerability and the nightmare that has ensued.<br>
+I feel so violated and betrayed. Not only was my personal information exposed, my dignity was trampled upon. The space where I once felt free to be myself is now just a reminder of my vulnerability and the nightmare that I encountered.<br>
 
 Now, I'm not even sure if I can call them 'parents' anymore. They found my medicines and severed all ties with me. Over something I had no control over. Over something that WeChat should have protected.<br>
 

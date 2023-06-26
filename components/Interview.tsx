@@ -15,7 +15,7 @@ const interviewTranscript = [
   },
   {
     speaker: "Dr. Jane Miller",
-    line: "Certainly. This breach is serious. Not only were contact lists and identities compromised, but personal chat histories and payment information too. That means your private conversations, your financial transactions, and your personal connections have been potentially exposed. It opens up possibilities for identity theft, financial fraud, and potential misuse of personal information.",
+    line: "Certainly. This breach is serious. Not only were contact lists and identities compromised, but personal chat histories too. That means your private conversations and your personal connections have been potentially exposed. It opens up possibilities for potential misuse of personal information.",
   },
   {
     speaker: "Interviewer",
@@ -23,7 +23,7 @@ const interviewTranscript = [
   },
   {
     speaker: "Dr. Jane Miller",
-    line: "After such a breach, the first step is to change your passwords immediately. Also, monitor your financial accounts for any unusual activity. It's a good idea to notify your bank about the breach. They can keep an extra eye out for fraudulent activity. If possible, enable two-factor authentication on your accounts.",
+    line: "After such a breach, the first step is to <span class='font-ApercuBold'>change your passwords immediately</span>. Also, monitor your financial accounts for any unusual activity. It's a good idea to notify your bank about the breach. They can keep an extra eye out for fraudulent activity. If possible, enable two-factor authentication on your accounts.",
   },
   {
     speaker: "Interviewer",
@@ -31,7 +31,7 @@ const interviewTranscript = [
   },
   {
     speaker: "Dr. Jane Miller",
-    line: "Proactive data privacy measures are crucial. Regularly updating your passwords and not using the same password across platforms is a good start. It's also essential to keep your software updated. Often, updates include patches for security vulnerabilities. Using encrypted messaging apps and having a good understanding of the privacy settings on the apps you use can also help you protect your data.",
+    line: "Proactive data privacy measures are crucial. Regularly updating your passwords and not using the same password across platforms is a good start. It's also essential to keep your software updated. Often, updates include patches for security vulnerabilities. Using encrypted messaging apps like Telegram and having a good understanding of the privacy settings on the apps you use can also help you protect your data.",
   },
   {
     speaker: "Interviewer",
@@ -74,7 +74,7 @@ const Interview = () => {
                 <span className="text-neutral-800 font-ApercuLight text-sm">
                   {line.speaker}:{" "}
                 </span>
-                {line.line}
+                <span dangerouslySetInnerHTML={{__html:line.line}} />
               </p>
             </div>
           ))}

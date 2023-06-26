@@ -12,12 +12,6 @@ const News = () => {
   });
   return (
     <>
-      <div className="h-screen flex flex-col font-ApercuLight text-4xl md:text-7xl justify-center items-start px-4 md:px-12 break-words w-[80vw]">
-        <h1>Now, experience a journey on a WeChat data leak incident. </h1>
-        <h2 className="mt-12 text-xl md:text-3xl">
-          Scroll down to read a news article
-        </h2>
-      </div>
       <div className="p-8 bg-white text-black">
         <h1 className="text-5xl font-ApercuBold">
           Major Data Breach Hits WeChat: Over 1 Billion Users Affected
@@ -57,8 +51,8 @@ const News = () => {
             After the incident, Tencent saw its stock plummet in immediate
             response to the news. This incident has further sparked debates on
             data privacy and security measures implemented by tech companies
-            worldwide. Concerns towards tech giants are rasiing, and the ethics
-            problem in today&apos;s world is more pronouced.{" "}
+            worldwide. Concerns towards tech giants are raising, and the ethics
+            problem in today&apos;s world is more pronounced.{" "}
           </span>
           <Image src={stock} alt="stock" height={300} />
           <p className="text-xs font-sans pb-2 text-gray-500">
