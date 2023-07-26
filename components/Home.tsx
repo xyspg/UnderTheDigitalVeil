@@ -1,6 +1,6 @@
-import React, {useRef} from 'react';
-import {motion, useInView} from "framer-motion";
-import {ArrowDownIcon} from "@radix-ui/react-icons";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { ArrowDownIcon } from "@radix-ui/react-icons";
 
 const Home = () => {
   const myRef = useRef<HTMLDivElement>(null);
@@ -9,66 +9,64 @@ const Home = () => {
     myRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-      <>
-        <div className="bg-[url('/bg.png')] bg-cover h-screen text-center">
-          <div
-              className="grid grid-rows-6 h-screen"
+    <>
+      <div className="bg-[url('/bg.png')] bg-cover h-screen text-center">
+        <div className="grid grid-rows-6 h-screen">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0, y: 100 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 0.1,
+                  duration: 0.8,
+                },
+              },
+            }}
+            className="row-span-3 flex flex-col justify-center items-center text-white"
           >
+            <h1 className="text-4xl md:text-screen-8 mb-8 font-ApercuBold uppercase">
+              Under the Digital Veil
+            </h1>
+            <h2 className="text-2xl mt-8 md:text-screen-2 font-ApercuLight">
+              A Deep Dive into Personal Data Privacy and Cybersecurity
+            </h2>
+          </motion.div>
 
-            <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={{
-                  hidden: { opacity: 0, y: 100 },
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                      delay: 0.1,
-                      duration: 0.8,
-                    },
-                  },
-                }}
-                className="row-span-3 flex flex-col justify-center items-center text-white">
-              <h1 className="text-4xl md:text-screen-8 mb-8 font-ApercuBold uppercase">
-                Under the Digital Veil
-              </h1>
-              <h2 className="text-2xl mt-8 md:text-screen-2 font-ApercuLight">
-                A Deep Dive into Personal Data Privacy and Cybersecurity
-              </h2>
-            </motion.div>
-
-            <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={{
-                  hidden: { opacity: 0, y: 100 },
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                      delay: 0.4,
-                      duration: 0.8,
-                    },
-                  },
-                }}
-                className="pt-32 row-span-3 font-ApercuLight text-2xl flex justify-center items-centeri text-white">
-              {/*<button onClick={scrollToRef} className="bg-black text-white px-6 py-3 rounded-lg">*/}
-              {/*  Start Exploring{" "}*/}
-              {/*</button>*/}
-              <div className="flex flex-col justify-center items-center gap-4">
-                Start Exploring
-                <ArrowDownIcon width={50} height={50} />
-              </div>
-            </motion.div>
-          </div>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0, y: 100 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 0.4,
+                  duration: 0.8,
+                },
+              },
+            }}
+            className="pt-32 row-span-3 font-ApercuLight text-2xl flex justify-center items-centeri text-white"
+          >
+            {/*<button onClick={scrollToRef} className="bg-black text-white px-6 py-3 rounded-lg">*/}
+            {/*  Start Exploring{" "}*/}
+            {/*</button>*/}
+            <div className="flex flex-col justify-center items-center gap-4">
+              Start Exploring
+              <ArrowDownIcon width={50} height={50} />
+            </div>
+          </motion.div>
         </div>
-      </>
+      </div>
+    </>
   );
 };
 
 export default Home;
-
 
 // import React from "react";
 // import Head from "next/head";
